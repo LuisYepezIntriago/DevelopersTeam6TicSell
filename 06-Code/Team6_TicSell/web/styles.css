@@ -6,9 +6,10 @@ body {
     font-size: 16px;
 }
 
-.Logo{
-    padding: 20px;
-    width: 30rem;
+.icon{
+    margin-left: 1px;
+    padding: 10px;
+    width: 50rem;
 }
 
 .contenedor {
@@ -46,3 +47,28 @@ body {
     color:rgb(7, 7, 7);
 }
 
+.hero {
+  background-image:url("images/FulliconTicSell.jpg");
+  background-repeat: no-repeat;
+
+}
+
+@media (min-width: 375px) {
+    .icon {
+        margin-right: 30px;
+        padding: 10px;
+        width: 30rem;
+    }
+}
+
+@media (min-width: 375px) {
+    .hero {
+        margin-left: 5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero {
+        margin-left: 30rem;
+    }
+}
