@@ -1,3 +1,4 @@
+/*Typography*/
 html {
     font-size: 62.5%;
 }
@@ -7,17 +8,12 @@ body {
 }
 
 .icon{
-    margin-left: 1px;
+    margin-left: 6rem; /*1rem = 10px*/
     padding: 10px;
     width: 50rem;
 }
 
-.contenedor {
-    max-width: 300rem;
-    margin: 0, auto;
-    margin-bottom: 1rem;
-}
-
+/*Navegación principal*/
 .navegacion_principal {
     background-color: rgb(8, 8, 8);
     font-size: 2rem;
@@ -26,13 +22,13 @@ body {
 
     font-weight: 700;
     flex-direction: column;
+    text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
-    .navegacion_principal {
-        flex-direction: row; 
-        justify-content: space-evenly;
-    }
+.contenedor {
+    max-width: 300rem;
+    margin: 0, auto;
+    margin-bottom: 1rem;
 }
 
 .navegacion_principal a {
@@ -47,28 +43,25 @@ body {
     color:rgb(7, 7, 7);
 }
 
-.hero {
-  background-image:url("images/FulliconTicSell.jpg");
-  background-repeat: no-repeat;
-
+@media (min-width: 768px) {
+    .navegacion_principal {
+        flex-direction: row; 
+        justify-content: space-evenly;
+    }
 }
+
 
 @media (min-width: 375px) {
     .icon {
-        margin-right: 30px;
+        margin-right: 70px;
         padding: 10px;
         width: 30rem;
     }
 }
 
 @media (min-width: 375px) {
-    .hero {
-        margin-left: 5rem;
+    .IconText {
+        margin-left: 4rem;
     }
 }
 
-@media (min-width: 768px) {
-    .hero {
-        margin-left: 30rem;
-    }
-}
