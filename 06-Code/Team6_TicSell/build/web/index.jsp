@@ -26,7 +26,7 @@
 
         <nav class="navegacion_principal contenedor">
             <a href="HTML/addItem.html">Registrar Productos</a>
-            <a href="#">Registrar Clientes</a>
+            <a href="HTML/addCustomer.html">Registrar Clientes</a>
             <a class="button">Registro Facturas</a>
             <a href="HTML/showDataSaved.jsp">Visualizar Datos</a>
         </nav>

@@ -6,6 +6,7 @@ package ModelDAO;
 
 import DataBaseMongo.ConnectionDatabase;
 import Interface.CRUDS;
+import Model.Customers;
 import Model.Item;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -50,13 +51,37 @@ public class ModelsDAO implements CRUDS {
        }
         return item;   
            
+    }
+     public ArrayList <Customers> getCustomers () throws ParseException, IOException {
+       
+       ConnectionDatabase mongoDBConnection = new ConnectionDatabase();
+       ArrayList<Customers> customers = new ArrayList<>();
+       MongoDatabase database = mongoDBConnection.connection();
+       MongoCollection collection = database.getCollection("customers");
+       MongoCursor<Document> cursor = collection.find().iterator();     
+        try {
+            
+            while (cursor.hasNext()) {
+                JsonObject jsonObject = new JsonParser().parse(cursor.next().toJson()).getAsJsonObject();
+                Customers users = new Customers();
+                users.setId(jsonObject.get("id").getAsString());
+                users.setName(jsonObject.get("name").getAsString());
+                users.setAddress(jsonObject.get("address").getAsString());
+                users.setPhone(jsonObject.get("phone").getAsString());             
+                customers.add(users);
+          }
+           
+       } finally {
+           cursor.close();
+       }
+        return customers;   
+           
 }
-
+   
     @Override
     public boolean addItem(Item item) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-
 }
 
 

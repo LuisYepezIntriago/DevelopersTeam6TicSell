@@ -24,7 +24,7 @@ public class ConnectionDatabase {
     public static MongoDatabase database;
 
     public MongoDatabase connection() {
-        String URI = "mongodb+srv://layepez3:270700@cluster0.lmgiiwp.mongodb.net/ticsell?retryWrites=true&w=majority";
+        String URI = "mongodb+srv://SilviaTeam6:DevelopTeam6@cluster0.jmp7qzy.mongodb.net/?retryWrites=true&w=majority";
 
         try {
             modelDatabase.setUri(new MongoClientURI(URI));
