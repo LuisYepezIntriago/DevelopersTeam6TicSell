@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="refresh" content="2;URL=../index.jsp">
-        <title>JSP Page</title>
+        <title>Añadir Producto</title>
     </head>
     <body>
         <header>Productos Agregados Correctamente</header>

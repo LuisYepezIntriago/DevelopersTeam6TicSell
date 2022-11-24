@@ -4,6 +4,8 @@
  */
 package Interface;
 
+import Model.Bill;
+import Model.Customers;
 import Model.Item;
 
 /**
@@ -12,4 +14,6 @@ import Model.Item;
  */
 public interface CRUDS {
     public boolean addItem(Item item);
+    public boolean addCustomer(Customers customers);
+    public boolean addBill(Bill bill);
 }
