@@ -9,12 +9,12 @@ package Model;
  * @author Lili
  */
 public class Customers {
-     private String Id;
+
+    private String Id;
     private String name;
     private String address;
     private String phone;
 
-   
     public Customers(String Id, String name, String address, String phone) {
         this.Id = Id;
         this.name = name;
@@ -58,5 +58,4 @@ public class Customers {
         this.phone = phone;
     }
 
-    
 }

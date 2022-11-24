@@ -1,6 +1,6 @@
 <%-- 
-    Document   : showDataSaved
-    Created on : Nov 23, 2022, 2:57:06 AM
+    Document   : showItemsSaved
+    Created on : Nov 23, 2022, 5:30:35 PM
     Author     : luisy
 --%>
 
@@ -10,32 +10,29 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="Model.Item"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TicSell</title>
+        <title>Visualizar Productos</title>
         <link href="../CSS/styles.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <div style="text-align: center;">
-            <img class="icon"src="../IMAGES/logoTicSell.jpg" alt=""/>
+            <img class="icon" src="../IMAGES/logoTicSell.jpg" >
         </div>
 
         <nav class="navegacion_principal contenedor">
-            <a href="HTML/addItem.html">Productos</a>
-            <a href="#">Clientes</a>
-            <a class="button">Facturas</a>
-            <a href="../index.jsp">Regresar</a>
+            <a href="../JSP/showDataSaved.jsp">Regresar</a>
         </nav>
-
         <div style="text-align: center;">
             <img class="IconText" src="../IMAGES/FulliconTicSell.jpg" alt=""/>
         </div>
+
         <header>
-            <h1>Catálogo</h1>
+            <h1>Lista de Productos</h1>
         </header>
         <%
             ModelsDAO modelosDAO = new ModelsDAO();
@@ -44,7 +41,6 @@
 
         %>
         <div class="tableStore">
-            <header class="text-center" >Lista de Productos</header>
             <section id = "DatosEnPantalla">
                 <table>
                     <thead>
@@ -82,4 +78,6 @@
             </section>
         </div>
     </body>
+</html>
+</body>
 </html>
