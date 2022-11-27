@@ -73,7 +73,50 @@
                         <%
                             }
                         %> 
+                    <a href="Controlador?accion=updateProduct&id=<%= product.getId()%>">
+
+                        <button class="btn btn-primary">
+
+                            Editar
+
+                        </button>
+
+                    </a>
+
+                    </td>
+
+                    <td class="text-center">
+
+                        <a href="Controlador?accion=deleteProduct&id=<%= product.getId()%>">
+
+                            <button class="btn btn-danger">
+
+                                Eliminar
+
+                            </button>
+
+                        </a>
+
+                    </td>
+
+                    </tr>
+
+                    <%}%>
+
                     </tbody>
+
+                </table>
+
+                <a href="Controlador?accion=addProducts">
+
+                    <button class="btn btn-success">
+
+                        Agregar
+
+                    </button>
+
+                </a>
+                </tbody>
                 </table>  
             </section>
         </div>
