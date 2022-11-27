@@ -45,7 +45,7 @@ public class DataBase {
         return mongoDataBase;
     }
 
-    public void setDataBase(Database DataBase) {
+    public void setDataBase(DataBase dataBase) {
         this.DataBase = DataBase;
     }
 
