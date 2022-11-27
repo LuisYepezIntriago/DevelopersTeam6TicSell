@@ -8,6 +8,7 @@ import ec.edu.espe.clientserver.model.Product;
 import ec.edu.espe.clientserver.modelDAO.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,21 +19,15 @@ import javax.servlet.http.HttpServletResponse;
  * @author luisy
  */
 public class Controlador extends HttpServlet {
-    String addProduct ="jsps/addProduct.jsp";
-    String updateProduct ="jsps/addProduct.jsp";
-    Product product = new Product();
-    ProductDAO productDao= new ProductDAO();
-    int id;
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    String addProduct = "jsps/addProduct.jsp";
+    String updateProduct = "jsps/updateProduct.jsp";
+    String listProduct = "jsps/listProduct.jsp";
+    String outProduct = "index.jsp";
+    int id;
+    Product product = new Product();
+    ProductDAO productDAO = new ProductDAO();
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -41,7 +36,7 @@ public class Controlador extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Controlador</title>");            
+            out.println("<title>Servlet Controlador</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet Controlador at " + request.getContextPath() + "</h1>");
@@ -50,47 +45,9 @@ public class Controlador extends HttpServlet {
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
-    }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
         String access = "";
         String acction = request.getParameter("accion");
         switch (acction) {
@@ -101,10 +58,11 @@ public class Controlador extends HttpServlet {
             break;
 
             case "Agregar": {
+                int identity = Integer.parseInt(request.getParameter("id"));
                 String name = request.getParameter("name");
-                float price = Float.parseFloat(request.getParameter("price"));
+                double price = Double.parseDouble(request.getParameter("price"));
                 int quantity = Integer.parseInt(request.getParameter("quantity"));
-                float profit = productDAO.calculateProfits(quantity, price);
+                double profit = productDAO.calculateProfits(price, quantity);
                 product.setName(name);
                 product.setPrice(price);
                 product.setQuantity(quantity);
@@ -124,9 +82,9 @@ public class Controlador extends HttpServlet {
             case "Actualizar": {
                 id = Integer.parseInt(request.getParameter("idProduct"));
                 String name = request.getParameter("name");
-                float price = Float.parseFloat(request.getParameter("price"));
+                double price = Double.parseDouble(request.getParameter("price"));
                 int quantity = Integer.parseInt(request.getParameter("quantity"));
-                float profit = productDAO.calculateProfits(quantity, price);
+                double profit = productDAO.calculateProfits(price, quantity);
                 product.setId(id);
                 product.setName(name);
                 product.setPrice(price);
@@ -143,26 +101,20 @@ public class Controlador extends HttpServlet {
             }
             break;
 
-         }
+        }
 
         RequestDispatcher view = request.getRequestDispatcher(access);
         view.forward(request, response);
-
     }
-
- 
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        processRequest(request, response);
     }
 
     @Override
     public String getServletInfo() {
         return "Short description";
-
     }// </editor-fold>
 
- 
 }

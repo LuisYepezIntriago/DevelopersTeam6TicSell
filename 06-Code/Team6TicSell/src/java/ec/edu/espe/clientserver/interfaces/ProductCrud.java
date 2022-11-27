@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author luisy
  */
-public class ProductCrud {
+public interface ProductCrud {
 
     public List listProducts();
     public Product listProduct(int id);
@@ -20,5 +20,6 @@ public class ProductCrud {
     public boolean deleteProduct(int id);
 
     /*Regla de negocio*/
-    public float calculateProfits(int quantity, float price);
+    public double calculateProfits(int quantity, double price);
+    public double calculateProfits(double price);
 }
