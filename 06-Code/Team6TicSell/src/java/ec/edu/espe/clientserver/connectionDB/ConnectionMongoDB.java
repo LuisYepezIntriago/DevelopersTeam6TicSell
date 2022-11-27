@@ -25,6 +25,6 @@ public class ConnectionMongoDB {
     }
     
     public MongoDatabase getMongoDatabase() {
-        return mongoClient.getDatabase("FashionStoreDB");
+        return mongoClient.getDatabase("ticsell");
     }
 }

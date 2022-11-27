@@ -27,7 +27,7 @@ public class Controlador extends HttpServlet {
     int id;
     Product product = new Product();
     ProductDAO productDAO = new ProductDAO();
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -50,6 +50,7 @@ public class Controlador extends HttpServlet {
             throws ServletException, IOException {
         String access = "";
         String acction = request.getParameter("accion");
+        System.out.println("---->"+acction);
         switch (acction) {
             case "addProducts": {
                 access = addProduct;
@@ -69,9 +70,8 @@ public class Controlador extends HttpServlet {
                 product.setProfit(profit);
                 productDAO.addProduct(product);
 
+                break;
             }
-
-            break;
 
             case "updateProduct": {
                 request.setAttribute("id", request.getParameter("id"));
@@ -106,6 +106,7 @@ public class Controlador extends HttpServlet {
         RequestDispatcher view = request.getRequestDispatcher(access);
         view.forward(request, response);
     }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
