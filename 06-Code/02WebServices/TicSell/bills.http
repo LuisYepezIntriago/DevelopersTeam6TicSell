@@ -1,0 +1,13 @@
+###
+POST http://localhost:3000/api/bills HTTP/1.1
+Content-Type: application/json
+
+{
+    "billIdCustomer": "1723169388",
+    "billAddress": "Quitumbe",
+    "billPhone": 0992837718,
+    "billEmail": "luisyepez16@hotmail.es",
+    "billItem": "HP G8",
+    "billQuantity": 2,
+    "billPrice": 700
+}
