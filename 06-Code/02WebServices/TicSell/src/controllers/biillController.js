@@ -13,7 +13,8 @@ export const postBill = async (req, res) => {
       quantity: req.body.quantity,
       price: req.body.price,
       subtotal: (req.body.subtotal = req.body.quantity * req.body.price),
-
+      iva: (req.body.iva = 0.12 * req.body.subtotal),
+      total: (req.body.total = req.body.subtotal + req.body.iva),
     });
     const billSaved = await newBill.save();
     res.json(billSaved);
@@ -27,8 +28,8 @@ export const getBill = async (req, res) => {
     const bills = await Bill.find();
     res.json(bills);
   } catch (err) {
-    res.status(500).json({ error: `Bill don't found` });
-  } 
+    res.status(500).json({ error: `Bill don't found` });
+  } 
 };
 
 export const getBillvById = async (req, res) => {
@@ -53,7 +54,8 @@ export const updateBillById = async (req, res) => {
         quantity: req.body.quantity,
         price: req.body.price,
         subtotal: (req.body.subtotal = req.body.quantity * req.body.price),
-
+        iva: (req.body.iva = 0.12 * req.body.subtotal),
+        total: (req.body.total = req.body.subtotal + req.body.iva),
       },
     });
     res.status(200).json({ message: `Bill updated successfull` });
