@@ -38,9 +38,9 @@ export const getCustomerById = async (req, res) => {
 
 export const updateCustomerById = async (req, res) => {
   const { id } = req.params;
-  const customer = await customer.findByIdAndUpdate(id, {
+  const customer = await customer.findByIdAndUpdate(id, { 
     $set: {
-      id: req.body.id,
+      customer: req.body.customer,
       name: req.body.name,
       lastname: req.body.lastname,
       birthday: req.body.birthday,

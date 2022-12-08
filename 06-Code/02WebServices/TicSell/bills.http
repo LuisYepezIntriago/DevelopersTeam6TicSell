@@ -3,8 +3,8 @@ POST http://localhost:3006/api/bills HTTP/1.1
 Content-Type: application/json
 
 {
-    "customer": "1723169388",
-    "name": "Luis",
+    "customer": "1598753",
+    "name": "Luis Angel",
     "lastname": "Yepez",
     "address": "Quitumbe",
     "phone": 992837718,
@@ -24,12 +24,12 @@ GET http://localhost:3006/api/bills/ HTTP/1.1
 DELETE http://localhost:3006/api/bills/ HTTP/1.1
 
 ###
-PUT http://localhost:3006/api/bills/63916ad4618732e61f059b38 HTTP/1.1
+PUT http://localhost:3006/api/bills/63916ae3618732e61f059b3f HTTP/1.1
 Content-Type: application/json
 
 {
     "customer": "1723169388",
-    "address": "La Zonash",
+    "address": "Quito Sur",
     "phone": 992837718,
     "email": "luisyepez16@hotmail.es",
     "item": "HP G8",
