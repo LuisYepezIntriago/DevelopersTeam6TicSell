@@ -1,6 +1,6 @@
 import {Schema, model} from "mongoose";
 const customerSchema = new Schema({
-    customer: {type: Number, required: true},
+    customer: {type: Number, required: true, unique: true},
     name: {type: String, required: true},
     lastname: {type: String, required: true},
     birthday: {type: Date, required: true},
