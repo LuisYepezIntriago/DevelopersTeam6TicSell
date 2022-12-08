@@ -14,7 +14,7 @@ Content-Type: application/json
 GET http://localhost:3006/api/items HTTP/1.1
 
 ###
-GET http://localhost:3006/api/items/ HTTP/1.1
+GET http://localhost:3006/api/items/638ef7353d02398c020ab8d0 HTTP/1.1
 
 ###
 DELETE http://localhost:3006/api/items/ HTTP/1.1
