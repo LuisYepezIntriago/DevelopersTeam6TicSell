@@ -1,0 +1,12 @@
+.formBox{
+    width: 1000px;
+}
+
+.formBox:active{
+    transform: scale(1.05);
+}
+
+.formBox:hover{
+    transform: scale(1.05);
+}
+
