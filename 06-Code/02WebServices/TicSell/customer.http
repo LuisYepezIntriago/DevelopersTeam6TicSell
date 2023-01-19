@@ -13,7 +13,7 @@ Content-Type: application/json
 }
 
 ### 
-GET http://localhost:3006/api/customers HTTP/1.1
+GET http://localhost:3006/api/cusStomers HTTP/1.1
 
 ###
 GET http://localhost:3006/api/customers/ HTTP/1.1
