@@ -3,7 +3,7 @@ const customerSchema = new Schema({
     customer: {type: Number, required: true, unique: true},
     name: {type: String, required: true},
     lastname: {type: String, required: true},
-    birthday: {type: Date, required: true},
+    birthday: {type: String, required: true},
     address: {type: String, required: true},
     city: {type: String, required: true},
     phone: {type: Number, required: true},

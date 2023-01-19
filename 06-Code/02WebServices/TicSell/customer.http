@@ -3,7 +3,7 @@ POST http://localhost:3006/api/customers HTTP/1.1
 Content-Type: application/json
 
 {
-    "customer": 1723169387,
+    "customer": 12345678,
     "name": "Lucho",
     "lastname": "Lopez",
     "birthday": "1998-10-10",
@@ -19,7 +19,7 @@ GET http://localhost:3006/api/customers HTTP/1.1
 GET http://localhost:3006/api/customers/ HTTP/1.1
 
 ###
-DELETE http://localhost:3006/api/customers/639247cfe9ff8f28e604601e HTTP/1.1
+DELETE http://localhost:3006/api/customers/ HTTP/1.1
 
 ###
 PUT http://localhost:3006/api/customers/ HTTP/1.1
