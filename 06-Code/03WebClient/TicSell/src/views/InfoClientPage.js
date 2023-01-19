@@ -10,6 +10,7 @@ import IconButton from "@mui/material/IconButton";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Link } from "react-router-dom";
 import { Description } from "@mui/icons-material";
+import LogoLetter from "../assets/logoletter.png";
 
 function InfoClientPage() {
   const [host, setHost] = useState("");
@@ -98,8 +99,8 @@ function InfoClientPage() {
             title="Sistema Operativo"
             img="https://cdn-icons-png.flaticon.com/512/2172/2172832.png"
             info={oprativeSystem[1]}
-          />     
-        </Box>
+          />  
+        </Box>  
       </Box>
     </div>
   );
