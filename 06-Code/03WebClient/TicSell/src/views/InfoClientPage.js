@@ -40,10 +40,10 @@ function InfoClientPage() {
 
   return (
     <div>
-      <AppBar position="fixed" color="primary" sx={{ padding: "0 10%" }}>
+      <AppBar position="fixed" color="" sx={{ padding: "0 10%" }}>
         <Toolbar>
           <Link to="/">
-            <IconButton sx={{ color: "#fff" }} aria-label="Return" size="large">
+            <IconButton sx={{ color: "black" }} aria-label="Return" size="large">
               <ArrowBackIcon sx={{ fontSize: "1.5em" }} />
             </IconButton>
           </Link>
@@ -51,7 +51,7 @@ function InfoClientPage() {
       </AppBar>
       <Box
         sx={{
-          marginTop: "100px",
+          marginTop: "20px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -81,7 +81,7 @@ function InfoClientPage() {
           />
           <CardInfo
             title="Host Remoto"
-            img=""
+            img="https://winaero.com/blog/wp-content/uploads/2017/04/remote-desktop-rdp-mstsc-icon.png"
             info={host}
           />
           <CardInfo
