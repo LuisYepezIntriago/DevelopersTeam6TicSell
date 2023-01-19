@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Box } from "@mui/system";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import "../Home/Table.css"
+import infoIcon from "../../assets/infoIcon.png";
 
 function TableOptions() {
   const btn = {
-    background: "linear-gradient(45deg, #fe6b8b 20%, #ff8e53 80%)",
+    background: "white",
     border: 0,
     borderRadius: 3,
     boxShadow: "o 3px 5px 2px rbga(255, 105, 135, .3)",
@@ -14,7 +16,7 @@ function TableOptions() {
     color: "black",
     height: 48,
     "&:hover": {
-      opacity: [0.9, 0.9, 0.9],
+      color: 'white',
     },
   };
 
@@ -29,9 +31,10 @@ function TableOptions() {
             textDecoration: "none",
           }}
         >
-          <Button to={`client-info`} sx={btn}>
-            Informacion Cliente
+          <Button className="infoClient">
+            <img src={infoIcon} to={`client-info`} alt="boton con imagen" />
           </Button>
+
         </Link>
       </Box>
   );

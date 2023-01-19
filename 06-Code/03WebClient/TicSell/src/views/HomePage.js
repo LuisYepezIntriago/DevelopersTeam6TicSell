@@ -7,6 +7,7 @@ import FormArticle from "../components/Home/FormArticle";
 import TableOptions from "../components/Home/TableOptions";
 import "../styles/TableLayout.css";
 import Logo from "../assets/logoTicSell.png";
+import LogoLetter from "../assets/logoletter.png";
 
 const HomePage = () => {
   const [formArticle, setFormArticle] = useState({
@@ -43,6 +44,9 @@ const HomePage = () => {
         <br />
         <div className="container">
           <Table articles={articles} />
+        </div>
+        <div className="endPage">
+          <img src={LogoLetter} alt="TicSell icon" />
         </div>
       </Box>
     </>

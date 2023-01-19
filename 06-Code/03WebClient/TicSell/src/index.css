@@ -29,6 +29,16 @@ code {
 	width: 100%;
 }
 
+.endPage {
+  display: flex;
+	width: 15rem;
+	margin: 0px auto;
+}
+
+.endPage img {
+	width: 100%;
+}
+
 .search {
   width: 100%;
   display: flex;

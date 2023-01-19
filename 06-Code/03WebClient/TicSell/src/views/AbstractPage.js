@@ -32,10 +32,10 @@ function AbstractPage() {
 
   return (
     <>
-      <AppBar position="fixed" color="primary" sx={{ padding: "0 10%" }}>
+      <AppBar position="fixed" color="" sx={{ padding: "0 10%" }}>
         <Toolbar>
           <Link to="/">
-            <IconButton sx={{ color: "#8ed1fc" }} aria-label="Return" size="large">
+            <IconButton sx={{ color: "black"}} aria-label="Return" size="large">
               <ArrowBackIcon sx={{ fontSize: "1.5em" }} />
             </IconButton>
           </Link>
@@ -52,11 +52,12 @@ function AbstractPage() {
       >
         <Box
           sx={{
-            margin: "0px 15%",
-            marginTop: "100px",
+            marginTop: "50px",
+            marginBottom: "0",
             padding: "50px 5%",
-            height: "100%",
-            background: "#8ed1fc",
+            height: "80%",
+            width: "95%",
+            background: "white",
             borderRadius: "15px",
             boxShadow: "1px 1px 5px #333",
           }}
