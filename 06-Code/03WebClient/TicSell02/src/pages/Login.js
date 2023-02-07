@@ -88,9 +88,9 @@ function Login() {
 
   return (
     <div className="app">
-      <div className="iconLogin">
-        <img src={Logo} alt="Logo" />
-      </div>
+        <div className="logo">
+          <img src={Logo} alt="TicSell icon" />
+        </div> 
         {isSubmitted ? <Home /> : renderForm}
       </div>
   );

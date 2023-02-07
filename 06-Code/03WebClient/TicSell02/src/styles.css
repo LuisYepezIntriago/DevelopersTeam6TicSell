@@ -3,6 +3,22 @@
   margin-bottom: 2rem;
 }
 
+.navbar-logout{
+  color: red;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.titulo-tabla{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.container{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .Formulario{
   display: flex;
   flex-direction: column;
@@ -187,3 +203,8 @@ code {
   border-radius: 8px;
 }
 
+.navbar-brand{
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}

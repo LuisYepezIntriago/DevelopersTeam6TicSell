@@ -15,11 +15,9 @@ const Navbar = ({brand}) => {
                     <a href='/viewItems' className="navbar-brand">Productos {ItemsList}</a>
                     <a href='/userRegister' className="navbar-brand">Registrar Usuario {UserRegister}</a>
                     <a href='/itemRegister' className="navbar-brand">Registrar Productos</a>
+                    <a href='/logout' className="navbar-logout">Cerrar Sesión</a>
             </div>
         </nav>
-
-
-
     );
     }
 

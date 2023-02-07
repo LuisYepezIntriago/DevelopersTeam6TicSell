@@ -1,3 +1,5 @@
+import "../styles.css"
+
 const UserList = ({ users }) => {
     return (
       <table className="table">

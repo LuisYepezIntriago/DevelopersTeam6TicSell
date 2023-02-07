@@ -19,7 +19,7 @@ root.render(
         <Route path="/userRegister" element={<UserRegister />} />
         <Route path="/viewItems" element={<ItemsList />} />
         <Route path="/itemRegister" element={<ItemRegister />} />
-
+        <Route path="/logout" element={<Login />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
