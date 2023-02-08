@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box } from "@mui/material";
-import LogoLetter from '../assets/logoletter.png';
-import Logo from '../assets/logoTicSell.png';
-import Navbar from './Navbar';
-import "../styles.css";
+import LogoLetter from '../../assets/logoletter.png';
+import Logo from '../../assets/logoTicSell.png';
+import Navbar from '../Navbar';
+import "../../styles.css";
 
 const UserRegister = () => {
     return (

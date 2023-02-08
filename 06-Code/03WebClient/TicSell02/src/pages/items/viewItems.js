@@ -1,5 +1,8 @@
+import { Button } from "@mui/material";
+
 const ItemList = ({ items }) => {
     return (
+      <div>
       <table className="table">
           <caption className="titulo-tabla">Lista de Productos</caption>
         <thead>
@@ -23,6 +26,10 @@ const ItemList = ({ items }) => {
           ))}
         </tbody>
       </table>
+      <Button className="BotonPostItem" color="primary" href="/itemRegister">Crear Producto</Button>
+      <Button className="BotonUpdateItem" color="primary" href="/updateItem">Actualizar Producto</Button>
+      <Button className="BotonDeleteItem" color="primary" href="/deleteItem">Eliminar Producto</Button>
+      </div>
     );
   };
   

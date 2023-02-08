@@ -4,8 +4,8 @@ import {
   BrowserRouter as Router,
   Route
 } from "react-router-dom";
-import Home from './pages/userList'
-import UserRegister from './pages/userRegister'
+import Home from './pages/costumers/userList'
+import UserRegister from './pages/costumers/userRegister'
 
 function App() {
   return (

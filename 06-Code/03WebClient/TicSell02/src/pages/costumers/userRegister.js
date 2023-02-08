@@ -1,11 +1,25 @@
 import React from 'react';
+import axios from 'axios';
 import { Box } from "@mui/material";
-import LogoLetter from '../assets/logoletter.png';
-import Logo from '../assets/logoTicSell.png';
-import Navbar from './Navbar';
-import "../styles.css";
+import {useState, useEffect} from 'react';
+import LogoLetter from '../../assets/logoletter.png';
+import Logo from '../../assets/logoTicSell.png';
+import Navbar from '../Navbar';
+import "../../styles.css";
 
 const UserRegister = () => {
+
+    const [users, setUsers] = useState([]);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        axios.post('http://ec2-52-23-176-81.compute-1.amazonaws.com:3006/api/customers')
+        .then(res => {
+            console.log(res);
+            console.log(res.data);
+        })
+    }
+
     return (
         <Box>
         <div className="logo">

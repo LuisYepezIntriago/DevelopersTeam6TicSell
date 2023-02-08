@@ -1,7 +1,9 @@
-import "../styles.css"
+import "../../styles.css"
+import Button from '@mui/material/Button';
 
 const UserList = ({ users }) => {
     return (
+      <div>
       <table className="table">
           <caption className="titulo-tabla">Lista de Clientes</caption>
         <thead>
@@ -29,6 +31,10 @@ const UserList = ({ users }) => {
           ))}
         </tbody>
       </table>
+      <Button className="BotonPostUser" color="primary" href="/userRegister">Crear Cliente</Button>
+      <Button className="BotonUpdateUser" color="primary" href="/updateUser">Actualizar Cliente</Button>
+      <Button className="BotonDeleteUser" color="primary" href="/deleteUser">Eliminar Cliente</Button>
+      </div>
     );
   };
   

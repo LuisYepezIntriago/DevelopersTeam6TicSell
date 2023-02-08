@@ -1,14 +1,14 @@
 import {Routes, Route} from 'react-router-dom'
-import Home  from './userList'
-import ViewUsers from './viewUsers'
-import ViewItems from './viewItems'
-import UserRegister from './userRegister'
-import ItemRegister from './itemRegister'
+import Home  from './costumers/userList'
+import ViewUsers from './costumers/viewUsers'
+import ViewItems from './items/viewItems'
+import UserRegister from './costumers/userRegister'
+import ItemRegister from './items/itemRegister'
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "../styles.css";
 import Logo from "../assets/logoTicSell.png";
-import ItemsList from './itemList'
+import ItemsList from './items/itemList'
 
 function Login() {
   // React States

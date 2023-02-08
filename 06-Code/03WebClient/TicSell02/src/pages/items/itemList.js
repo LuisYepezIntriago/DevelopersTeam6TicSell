@@ -1,9 +1,9 @@
 import React, {Fragment, useState, useEffect} from 'react';
 import { Box } from "@mui/material";
-import LogoLetter from '../assets/logoletter.png';
-import Logo from '../assets/logoTicSell.png';
-import "../styles.css";
-import Navbar from './Navbar';
+import LogoLetter from '../../assets/logoletter.png';
+import Logo from '../../assets/logoTicSell.png';
+import "../../styles.css";
+import Navbar from '../Navbar';
 import ItemList from './viewItems';
 
 function ItemsList() {
