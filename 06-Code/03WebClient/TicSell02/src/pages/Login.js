@@ -1,5 +1,4 @@
 import {Routes, Route} from 'react-router-dom'
-import Layout from './Layout'
 import Home  from './userList'
 import ViewUsers from './viewUsers'
 import ViewItems from './viewItems'
@@ -9,6 +8,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "../styles.css";
 import Logo from "../assets/logoTicSell.png";
+import ItemsList from './itemList'
 
 function Login() {
   // React States
@@ -91,7 +91,7 @@ function Login() {
         <div className="logo">
           <img src={Logo} alt="TicSell icon" />
         </div> 
-        {isSubmitted ? <Home /> : renderForm}
+        {isSubmitted ? <ItemsList /> : renderForm}
       </div>
   );
 }
