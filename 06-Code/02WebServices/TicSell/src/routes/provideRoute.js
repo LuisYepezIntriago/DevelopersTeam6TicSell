@@ -8,3 +8,4 @@ router.get("/:id", providerController.getProviderById);
 router.put("/:id", providerController.updateProviderById);
 router.delete("/:id", providerController.deleteProviderById);
 export default router;
+
