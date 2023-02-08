@@ -2,6 +2,8 @@ import express from "express";
 import itemRouter from "./routes/item.route";
 import billRouter from "./routes/bill.route";
 import customerRouter from "./routes/customer.route";
+import provideRouter from "./routes/provideRoute";
+
 import cors from "cors";
 const app = express();
 
@@ -15,4 +17,5 @@ app.get("/", (req, res) => {
 app.use("/api/items", itemRouter);
 app.use("/api/bills", billRouter);
 app.use("/api/customers", customerRouter);
+app.use("/api/providers", provideRouter);
 export default app;

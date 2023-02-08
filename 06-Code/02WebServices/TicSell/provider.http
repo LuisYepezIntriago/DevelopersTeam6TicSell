@@ -1,0 +1,15 @@
+PUT http://localhost:3006/api/providers/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "RUC": 175487563,
+    "ProviderName": "Phone Ditribuidor",
+    "Addres": "Quito",
+    "Phone": "23456789",
+    "SellerName": "Wilmer Morales",
+}
+
+        ProvidrName: req.body.model,
+        Address: req.body.description,
+        Phone: req.body.price,
+        SellerName: req.body.quantity,
