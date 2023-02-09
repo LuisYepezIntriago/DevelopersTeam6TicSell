@@ -34,7 +34,7 @@ const BillList = ({ bills }) => {
   };
 
   const modifiedBill = async (idModified) => {
-    await axios.put(`http://ec2-52-23-176-81.compute-1.amazonaws.com:3006/api/bills/${idModified}`, {
+    await axios.put(`http://localhost:3006/api/bills/${idModified}`, {
       customer,
       name,
       lastname,

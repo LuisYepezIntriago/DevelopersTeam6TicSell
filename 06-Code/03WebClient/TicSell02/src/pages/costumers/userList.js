@@ -18,7 +18,7 @@ function Home() {
       birthday: '',
       address: '',
       city: '',
-      phone: ''
+      phone: '',
     }
   ]);
 

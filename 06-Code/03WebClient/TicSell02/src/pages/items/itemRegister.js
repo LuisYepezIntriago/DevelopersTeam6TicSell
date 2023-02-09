@@ -24,7 +24,7 @@ function ItemRegister () {
             model,
             description,
             price,
-            quantity
+            quantity,
         })
     } 
 

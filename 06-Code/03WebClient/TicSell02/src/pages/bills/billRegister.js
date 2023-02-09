@@ -7,16 +7,16 @@ import Navbar from '../Navbar';
 import "../../styles.css";
 
 function BillRegister () {
-    const [customer, setCustomer] = React.useState('');
-    const [name, setName] = React.useState('');
-    const [lastname, setLastname] = React.useState('');
-    const [address, setAddress] = React.useState('');
-    const [phone, setPhone] = React.useState('');
-    const [email, setEmail] = React.useState('');
-    const [item, setItems] = React.useState('');
-    const [quantity, setQuantity] = React.useState('');
-    const [price, setPrice] = React.useState('');
-       
+    const [customer, setCustomer] = React.useState("");
+    const [name, setName] = React.useState("");
+    const [lastname, setLastname] = React.useState("");
+    const [address, setAddress] = React.useState("");
+    const [phone, setPhone] = React.useState("");
+    const [email, setEmail] = React.useState("");
+    const [item, setItems] = React.useState("");
+    const [quantity, setQuantity] = React.useState("");
+    const [price, setPrice] = React.useState("");       
+
     useEffect(() => {
     }, []
     )
@@ -31,7 +31,7 @@ function BillRegister () {
             email,
             item,
             quantity,
-            price    
+            price,
         })
     } 
 
@@ -41,6 +41,7 @@ function BillRegister () {
           <img src={Logo} alt="TicSell icon" />
         </div> 
         <Navbar />
+        <br />
         <form className='Formulario'>
             <h1 className='Titulo'>Registro de Facturas</h1>
             <label className='Label'>Cédula</label>
@@ -54,14 +55,13 @@ function BillRegister () {
             <label className='Label'>Teléfono</label>
             <input className='Input' onChange={(e)=>setPhone(e.target.value)} type='number' name='phone' placeholder='Teléfono' />
             <label className='Label'>Correo</label>
-            <input className='Input' onChange={(e)=>setEmail(e.target.value)} type='text' name='email' placeholder='Correo' />
-            <label className='Label'>Artículo</label>
-            <input className='Input' onChange={(e)=>setItems(e.target.value)} type='text' name='items' placeholder='Artículo' />
+            <input className='Input' onChange={(e)=>setEmail(e.target.value)} type='email' name='email' placeholder='Correo' />
+            <label className='Label'>Producto</label>
+            <input className='Input' onChange={(e)=>setItems(e.target.value)} type='text' name='item' placeholder='Producto' />
             <label className='Label'>Cantidad</label>
             <input className='Input' onChange={(e)=>setQuantity(e.target.value)} type='number' name='quantity' placeholder='Cantidad' />
             <label className='Label'>Precio</label>
             <input className='Input' onChange={(e)=>setPrice(e.target.value)} type='number' name='price' placeholder='Precio' />
-              
             <br />
             <div>
                 <button className='Button' type='submit' onClick={() => addBill()} >Registrar</button>

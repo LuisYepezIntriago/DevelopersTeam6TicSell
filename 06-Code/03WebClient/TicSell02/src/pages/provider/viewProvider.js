@@ -4,7 +4,7 @@ import axios from "axios";
 const ProviderList = ({ providers }) => {
 
   const deleteProviders = async (_id) => {
-    await axios.delete(`http://ec2-52-23-176-81.compute-1.amazonaws.com:3006/api/providers/${_id}`)  
+    await axios.delete(`http://localhost:3006/api/providers/${_id}`)  
   }
   
     return (
