@@ -28,7 +28,7 @@ function BillsList() {
 
   useEffect(() => {
     const getBills = () => {
-      fetch('http://ec2-52-23-176-81.compute-1.amazonaws.com:3006/api/bills')
+      fetch('http://localhost:3006/api/bills')
       .then(res => res.json())
       .then(res => setBills(res))
     }

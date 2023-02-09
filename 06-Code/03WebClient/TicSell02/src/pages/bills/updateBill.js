@@ -6,21 +6,17 @@ import Logo from '../../assets/logoTicSell.png';
 import Navbar from '../Navbar';
 import "../../styles.css";
 
-function BillRegister () {
-    const [customer, setCustomer] = React.useState('');
-    const [address, setAddress] = React.useState('');
-    const [phone, setPhone] = React.useState('');
-    const [email, setEmail] = React.useState('');
-    const [items, setItems] = React.useState('');
-    const [quantity, setQuantity] = React.useState('');
-    const [price, setPrice] = React.useState('');       
+function BillUpdate (props) {
+    const [customer, setCustomer] = React.useState(props.customer);
+    const [address, setAddress] = React.useState(props.address);
+    const [phone, setPhone] = React.useState(props.phone);
+    const [email, setEmail] = React.useState(props.email);
+    const [items, setItems] = React.useState(props.items);
+    const [quantity, setQuantity] = React.useState(props.quantity);
+    const [price, setPrice] = React.useState(props.price);       
 
-    useEffect(() => {
-    }, []
-    )
-
-    const addBill = async () => {
-        await axios.post('http://localhost:3006/api/bills', {
+    const updateBill = async () => {
+        await axios.put(`http://localhost:3006/api/bills/${props._id}`, {
             customer,
             address,
             phone,
@@ -37,9 +33,8 @@ function BillRegister () {
           <img src={Logo} alt="TicSell icon" />
         </div> 
         <Navbar />
-        <br />
         <form className='Formulario'>
-            <h1 className='Titulo'>Registro de Factura</h1>
+            <h1 className='Titulo'>Actualizar Factura</h1>
             <label className='Label'>Cédula</label>
             <input className='Input' onChange={(e)=>setCustomer(e.target.value)} type='number' name='id' placeholder='Cédula' />
             <label className='Label'>Dirección</label>
@@ -56,7 +51,7 @@ function BillRegister () {
             <input className='Input' onChange={(e)=>setPrice(e.target.value)} type='number' name='price' placeholder='Precio' />
             <br />
             <div>
-                <button className='Button' type='submit' onClick={() => addBill()} >Registrar</button>
+                <button className='Button' type='submit' onClick={() => updateBill()} >Actualizar</button>
             </div>
         </form>
         <div className="endPage">
@@ -66,4 +61,4 @@ function BillRegister () {
     );
 }
 
-export default BillRegister;
+export default BillUpdate;

@@ -1,7 +1,22 @@
 import { Button } from "@mui/material";
+import React from "react";
+import axios from "axios";
 import "../../styles.css"
 
 const BillList = ({ bills }) => {
+
+  const [validationModified, setValidationModified] = React.useState(false)
+
+  const deleteBill = async (_id) => {
+    await axios.delete(`http://localhost:3006/api/bills/${_id}`)  
+  }
+
+  const activateModified = async () => {
+    validationModified(true) 
+  }
+
+  
+
     return (
       <div>
       <table className="table">
@@ -17,11 +32,13 @@ const BillList = ({ bills }) => {
             <th scope="col">Producto</th>
             <th scope="col">Cantidad</th>
             <th scope="col">Precio</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Acción</th>
           </tr>
         </thead>
         <tbody>
           {bills.map((bill) => (
-            <tr key={bill.id}>
+            <tr>
               <td scope="col">{bill.customer}</td>
               <td scope="col">{bill.name}</td>
               <td scope="col">{bill.lastname}</td>
@@ -31,13 +48,13 @@ const BillList = ({ bills }) => {
               <td scope="col">{bill.item}</td>
               <td scope="col">{bill.quantity}</td>
               <td scope="col">{bill.price}</td>
+              <td scope="col"><Button className="BotonUpdateItem" color="primary" href="/updateBill" onClick={() => activateModified (bill._id)} >Actualizar</Button></td>
+              <td scope="col"><Button className="BotonDeleteItem" color="primary" onClick={() => deleteBill(bill._id)}>Eliminar</Button></td>
             </tr>
           ))}
         </tbody>
       </table>
       <Button className="BotonPostBill" color="primary" href="/billRegister">Crear Factura</Button>
-      <Button className="BotonUpdateBill" color="primary" href="/updateBill">Actualizar Factura</Button>
-      <Button className="BotonDeleteBill" color="primary" href="/deleteBill">Eliminar Factura</Button>
       </div>
     );
   };

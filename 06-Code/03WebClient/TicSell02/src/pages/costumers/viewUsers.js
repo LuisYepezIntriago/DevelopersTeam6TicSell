@@ -15,6 +15,8 @@ const UserList = ({ users }) => {
             <th scope="col">Dirección</th>
             <th scope="col">Ciudad</th>
             <th scope="col">Teléfono</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Acción</th>
           </tr>
         </thead>
         <tbody>
@@ -27,6 +29,8 @@ const UserList = ({ users }) => {
               <td scope="col">{user.address}</td>
               <td scope="col">{user.city}</td>
               <td scope="col">{user.phone}</td>
+              <td scope="col"><Button className="BotonUpdateItem" color="primary" href="/updateItem">Actualizar</Button></td>
+                <td scope="col"><Button className="BotonDeleteItem" color="primary" href="/deleteItem">Eliminar</Button></td>
             </tr>
           ))}
         </tbody>
@@ -39,5 +43,3 @@ const UserList = ({ users }) => {
   };
   
   export default UserList;
-
-  

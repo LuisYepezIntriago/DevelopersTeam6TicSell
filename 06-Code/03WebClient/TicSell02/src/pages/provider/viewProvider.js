@@ -13,6 +13,8 @@ const ProviderList = ({ bills }) => {
             <th scope="col">Dirección</th>
             <th scope="col">Teléfono</th>
             <th scope="col">Nombre del Vendedor</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Acción</th>
           </tr>
         </thead>
         <tbody>
@@ -23,13 +25,13 @@ const ProviderList = ({ bills }) => {
                 <td scope="col">{bill.Addres}</td>
                 <td scope="col">{bill.Phone}</td>
                 <td scope="col">{bill.SellerName}</td>
+                <td scope="col"><Button className="BotonUpdateItem" color="primary" href="/updateItem">Actualizar</Button></td>
+                <td scope="col"><Button className="BotonDeleteItem" color="primary" href="/deleteItem">Eliminar</Button></td>
             </tr>
           ))}
         </tbody>
       </table>
       <Button className="BotonPostProvider" color="primary" href="/providerRegister">Crear Proveedor</Button>
-        <Button className="BotonUpdateProvider" color="primary" href="/updateProvider">Actualizar Proveedor</Button>
-        <Button className="BotonDeleteProvider" color="primary" href="/deleteProvider">Eliminar Proveedor</Button>
       </div>
     );
   };
