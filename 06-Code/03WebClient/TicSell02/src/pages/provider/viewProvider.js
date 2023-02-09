@@ -1,8 +1,14 @@
 import { Button } from "@mui/material";
-import "../../styles.css"
+import axios from "axios";
 
-const ProviderList = ({ bills }) => {
+const ProviderList = ({ providers }) => {
+
+  const deleteProviders = async (_id) => {
+    await axios.delete(`http://ec2-52-23-176-81.compute-1.amazonaws.com:3006/api/providers/${_id}`)  
+  }
+  
     return (
+
       <div>
       <table className="table">
           <caption className="titulo-tabla">Lista de Proveedores</caption>
@@ -13,23 +19,25 @@ const ProviderList = ({ bills }) => {
             <th scope="col">Dirección</th>
             <th scope="col">Teléfono</th>
             <th scope="col">Nombre del Vendedor</th>
+            <th scope="col">Acción</th>
+            <th scope="col">Acción</th>
           </tr>
         </thead>
         <tbody>
-          {bills.map((bill) => (
-            <tr key={bill.id}>
-              <td scope="col">{bill.RUC}</td>
-                <td scope="col">{bill.ProviderName}</td>
-                <td scope="col">{bill.Addres}</td>
-                <td scope="col">{bill.Phone}</td>
-                <td scope="col">{bill.SellerName}</td>
+          {providers.map((provider) => (
+            <tr>
+                <td scope="col">{provider.ruc}</td>
+                <td scope="col">{provider.nameProvider}</td>
+                <td scope="col">{provider.address}</td>
+                <td scope="col">{provider.phone}</td>
+                <td scope="col">{provider.nameSeller}</td>
+                <td scope="col"><Button className="BotonUpdateItem" color="primary" href="/updateProvider">Actualizar</Button></td>
+                <td scope="col"><Button className="BotonDeleteItem" color="primary" onClick={() => deleteProviders(provider._id)}>Eliminar</Button></td>
             </tr>
           ))}
         </tbody>
       </table>
-      <Button className="BotonPostProvider" color="primary" href="/providerRegister">Crear Proveedor</Button>
-        <Button className="BotonUpdateProvider" color="primary" href="/updateProvider">Actualizar Proveedor</Button>
-        <Button className="BotonDeleteProvider" color="primary" href="/deleteProvider">Eliminar Proveedor</Button>
+      <Button className="BotonPostItem" color="primary" href="/providerRegister">Crear Producto</Button>
       </div>
     );
   };

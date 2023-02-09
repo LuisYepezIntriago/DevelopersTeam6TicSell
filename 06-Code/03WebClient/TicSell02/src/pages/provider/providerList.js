@@ -10,25 +10,25 @@ import ProviderList from './viewProvider';
 
 function ProvidersList() {
 
-  const [bill, setBill] = useState([
+  const [provider, setProvider] = useState([
     {
-      RUC: '',
-      ProviderName: '',
-      Addres: '',
+      ruc: '',
+      nameProvider: '',
+      addres: '',
       Phone: '',
-      SellerName: '',
+      nameSeller: '',
     }
   ]);
 
-  const [bills, setBills] = useState([]);
+  const [providers, setProviders] = useState([]);
 
   useEffect(() => {
-    const getBills = () => {
+    const getProviders = () => {
       fetch('http://ec2-52-23-176-81.compute-1.amazonaws.com:3006/api/providers')
       .then(res => res.json())
-      .then(res => setBills(res))
+      .then(res => setProviders(res))
     }
-    getBills();
+    getProviders();
   }, [])
 
   return (
@@ -39,7 +39,7 @@ function ProvidersList() {
         </div> 
         <Navbar />
         <br />
-        <ProviderList bills={bills} />
+        <ProviderList providers={providers} />
         <div className="endPage">
           <img src={LogoLetter} alt="TicSell icon" />
         </div>

@@ -8,8 +8,12 @@ import UserRegister from "./pages/costumers/userRegister";
 import UserList from "./pages/costumers/viewUsers"; 
 import ItemsList from "./pages/items/itemList";
 import ItemRegister from "./pages/items/itemRegister";
+import ProviderRegister from "./pages/provider/providerRegister";
 import ProvidersList from "./pages/provider/providerList";
 import BillsList from "./pages/bills/billList";
+import UserDelete from "./pages/costumers/userDelete";
+import BillRegister from "./pages/bills/billRegister";
+import BillUpdate from "./pages/bills/updateBill";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,8 +26,12 @@ root.render(
         <Route path="/viewItems" element={<ItemsList />} />
         <Route path="/viewProviders" element={<ProvidersList />} />
         <Route path="/viewBills" element={<BillsList />} />
+        <Route path="/updateBill" element={<BillUpdate />} />
         <Route path="/itemRegister" element={<ItemRegister />} />
-        <Route path="/logout" element={<Login />} />
+        <Route path="/providerRegister" element={<ProviderRegister />} />
+        <Route path="/billRegister" element={<BillRegister />} />
+        <Route path="/logout" element={<Login />} /> 
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
