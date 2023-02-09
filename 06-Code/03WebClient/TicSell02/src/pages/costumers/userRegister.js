@@ -21,14 +21,14 @@ function UserRegister () {
     )
 
     const addUser = async () => {
-        await axios.post('http://localhost:3006/api/customers', {
+        await axios.post('http://ec2-52-23-176-81.compute-1.amazonaws.com:3006/api/customers', {
             customer,
             name,
             lastname,
             birthday,
             address,
             city,
-            phone,    
+            phone    
         })
     } 
 

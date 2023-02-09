@@ -26,7 +26,7 @@ function Home() {
 
   useEffect(() => {
     const getUsers = () => {
-      fetch('http://localhost:3006/api/customers')
+      fetch('http://ec2-52-23-176-81.compute-1.amazonaws.com:3006/api/customers')
       .then(res => res.json())
       .then(res => setUsers(res))
     }

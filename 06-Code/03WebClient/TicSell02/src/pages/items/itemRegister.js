@@ -19,12 +19,12 @@ function ItemRegister () {
     )
 
     const addItem = async () => {
-        await axios.post('http://localhost:3006/api/items', {
+        await axios.post('http://ec2-52-23-176-81.compute-1.amazonaws.com:3006/api/items', {
             brand,
             model,
             description,
             price,
-            quantity,
+            quantity
         })
     } 
 

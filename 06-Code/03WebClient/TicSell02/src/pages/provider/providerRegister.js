@@ -7,11 +7,11 @@ import Navbar from '../Navbar';
 import "../../styles.css";
 
 function ProviderRegister () {
-    const [RUC, setRUC] = React.useState('');
-    const [ProviderName, setProviderName] = React.useState('');
-    const [Address, setAddress] = React.useState('');
-    const [Phone, setPhone] = React.useState('');
-    const [SellerName, setSellerName] = React.useState('');
+    const [ruc, setRUC] = React.useState('');
+    const [nameProvider, setProviderName] = React.useState('');
+    const [address, setAddress] = React.useState('');
+    const [phone, setPhone] = React.useState('');
+    const [nameSeller, setNameSeller] = React.useState('');
       
 
     useEffect(() => {
@@ -19,13 +19,13 @@ function ProviderRegister () {
     )
 
     const addProvider = async () => {
-        await axios.post('http://localhost:3006/api/providers', {
-            RUC,
-            ProviderName,
-            Address,
-            Phone,
-            SellerName,   
-        })
+        await axios.post('http://ec2-52-23-176-81.compute-1.amazonaws.com:3006/api/providers', {
+            ruc,
+            nameProvider,
+            address,
+            phone,
+            nameSeller
+        }) 
     } 
 
     return (
@@ -46,7 +46,7 @@ function ProviderRegister () {
             <label className='Label'>Teléfono</label>
             <input className='Input' onChange={(e)=>setPhone(e.target.value)} type='text' name='phone' placeholder='Teléfono' />
             <label className='Label'>Nombre del vendedor</label>
-            <input className='Input' onChange={(e)=>setSellerName(e.target.value)} type='text' name='seller' placeholder='Nombre del vendedor' />
+            <input className='Input' onChange={(e)=>setNameSeller(e.target.value)} type='text' name='seller' placeholder='Nombre del vendedor' />
             <br />
             <div>
                 <button className='Button' type='submit' onClick={() => addProvider()} >Registrar</button>

@@ -26,7 +26,7 @@ root.render(
         <Route path="/viewItems" element={<ItemsList />} />
         <Route path="/viewProviders" element={<ProvidersList />} />
         <Route path="/viewBills" element={<BillsList />} />
-        <Route path="/updateBill/:id" element={<BillUpdate />} />
+        <Route path="/updateBill" element={<BillUpdate />} />
         <Route path="/itemRegister" element={<ItemRegister />} />
         <Route path="/providerRegister" element={<ProviderRegister />} />
         <Route path="/billRegister" element={<BillRegister />} />
