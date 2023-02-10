@@ -1,0 +1,40 @@
+###
+POST http://localhost:3006/api/bills HTTP/1.1
+Content-Type: application/json
+
+{
+    "customer": "1458741",
+    "name": "Saul",
+    "lastname": "Torres",
+    "address": "Quito Norte",
+    "phone": 992837718,
+    "email": "alfreed6@hotmail.es",
+    "item": "HP G8",
+    "quantity": 2,
+    "price": 870
+}
+
+### 
+GET http://localhost:3006/api/bills HTTP/1.1
+
+###
+GET http://localhost:3006/api/bills/639237c2d0d85b08d47ed7cd HTTP/1.1
+
+###
+DELETE http://localhost:3006/api/bills/ HTTP/1.1
+
+###
+PUT http://localhost:3006/api/bills/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "customer": "15428752",
+    "name": "Angel",
+    "lastname": "Yepez",
+    "address": "Quito Norte",
+    "phone": 5287415,
+    "email": "luisyepez16@gmail.es",
+    "item": "Toshiba G8",
+    "quantity": 2,
+    "price": 200
+}

@@ -1,0 +1,36 @@
+###
+POST http://localhost:3006/api/customers HTTP/1.1
+Content-Type: application/json
+
+{
+    "customer": 1748596547,
+    "name": "Said",
+    "lastname": "Lopez",
+    "birthday": "1998-10-10",
+    "address": "oshi G8",
+    "city": "Quito",
+    "phone": 8520
+}
+
+### 
+GET http://localhost:3006/api/cusStomers HTTP/1.1
+
+###
+GET http://localhost:3006/api/customers/ HTTP/1.1
+
+###
+DELETE http://localhost:3006/api/customers/ HTTP/1.1
+
+###
+PUT http://localhost:3006/api/customers/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "customer": 175487563,
+    "name": "Luis",
+    "lastname": "Ponce",
+    "birthday": "1996-10-10",
+    "address": "HP G8",
+    "city": "Hola",
+    "phone": 870
+}
